@@ -54,7 +54,7 @@ function createCard(post,user){
     contanier_conteudo.classList.add('contanier_conteudo')
     title.innerText = post.title
 
-    descricao.innerText = post.content.substring(0,150)
+    descricao.innerText = `${post.content.substring(0,150)}...`
 
     acessar_Post.innerText = "Acessar publicação"
     acessar_Post.classList.add('acessar_post')
@@ -88,10 +88,21 @@ export function renderProfile(user){
 
     imgPerfil.alt = user.username
     imgPerfil.src = user.avatar
-    
-    contanierPerfil.append(button,imgPerfil)
+    imgPerfil.classList.add('avatar_profile')
 
+    const contanier_logout = document.createElement('div')
+    const email_logout = document.createElement('p')
+    const sairDaConta = document.createElement('p')
     
+    contanier_logout.classList.add('contanier_logout')
+    
+    email_logout.innerText = user.email
+    sairDaConta.innerText = 'Sair da conta'
+
+    contanier_logout.append(email_logout,sairDaConta)
+    
+    contanierPerfil.append(button,imgPerfil,contanier_logout)
+  
 }
 
 
@@ -115,6 +126,9 @@ const contanier_buttons = document.createElement('div')
 const buttonCancelar = document.createElement('button')
 const buttonPublicar = document.createElement('button')
 
+contanier_modal.classList.add('contanier_header')
+contanier_buttons.classList.add('contanier_buttons_modal')
+
 criandoNovoPost.innerText = "Criando novo post"
 
 buttonCloseModal.innerText = "X"
@@ -133,6 +147,7 @@ nomeconteudoInput.classList.add('add_newpost')
 
 
 buttonCancelar.innerText = "Cancelar"
+buttonCancelar.classList.add('CancelarPost')
 buttonPublicar.innerText = "Publicar"
 buttonPublicar.classList.add('publicarPost')
 
@@ -169,6 +184,9 @@ const contanier_buttons = document.createElement('div')
 const buttonCancelar = document.createElement('button')
 const buttonSalvar = document.createElement('button')
 
+contanier_modal.classList.add('contanier_header')
+contanier_buttons.classList.add('contanier_buttons_modal')
+
 editandoPost.innerText = "Edição"
 
 buttonCloseModal.innerText = "X"
@@ -187,6 +205,7 @@ nomeconteudoInput.classList.add('editar_post')
 
 
 buttonCancelar.innerText = "Cancelar"
+buttonCancelar.classList.add('cancelar_alteracoes')
 buttonSalvar.innerText = "Salvar Alterações"
 buttonSalvar.classList.add('salvar_alteracoes')
 
@@ -221,6 +240,11 @@ const contanier_buttons = document.createElement('div')
 const buttonCancelar = document.createElement('button')
 const buttonSimExcluir = document.createElement('button')
 
+
+contanier_modal.classList.add('contanier_header')
+contanier_buttons.classList.add('contanier_buttons_modal')
+contanier_aviso.classList.add('contanier_conteudo_modal')
+
 excluirModalPost.innerText = "Confirmação de exclusão"
 
 buttonCloseModal.innerText = "X"
@@ -250,7 +274,7 @@ lista.appendChild(contanier_modal)
 
 
 export function createModalAcessarPost(post){
-    
+
     const lista = document.querySelector('.controler_modal')
 
     lista.innerHTML = ''
@@ -265,7 +289,7 @@ export function createModalAcessarPost(post){
     const title = document.createElement('h3')
     const descricao = document.createElement('p')
     
-    contanier_Perfil.classList.add('contanier_Perfil_Post')
+    contanier_Perfil.classList.add('contanier_Perfil_Post_Modal')
     
     perfil.classList.add('perfil')
 
@@ -278,7 +302,7 @@ export function createModalAcessarPost(post){
     buttonCloseModal.innerText = "X"
     buttonCloseModal.classList.add('closeModal')
 
-    contanier_conteudo.classList.add('contanier_conteudo')
+    contanier_conteudo.classList.add('contanier_conteudo_modal')
 
     title.innerText = post.title
     descricao.innerText = post.content 

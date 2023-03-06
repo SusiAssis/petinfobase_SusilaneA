@@ -7,6 +7,17 @@ import { userProfile } from "./requests.js";
 import { creatPosts } from "./requests.js";
 import { alterarPosts, deletePost } from "./requests.js";
 
+function autentication(){
+const token = localStorage.getItem('@petinfo:token')
+
+    if(!token){
+    window.location.replace('../../index.html')
+    }
+}
+
+
+
+
 async function renderDashboard(){
     const user = await userProfile()
     const allposts = await readAllPosts()
@@ -22,6 +33,7 @@ async function renderDashboard(){
     showEditarPost()
     showExcluirPost()
     showModalAcessar()
+    hiddenProfile()
 
 }
 renderDashboard()
@@ -73,7 +85,7 @@ function handleNewPost(){
         })
         console.log(newPost)
         if(count!= 0){
-            return alert('Por favor preecha os campos necessários')
+            alert('Por favor preecha os campos necessários',)
         }else{
             await creatPosts(newPost)
             modalControler.close()
@@ -205,4 +217,17 @@ function renderModalAcessar(id){
 }
 
 
+async function hiddenProfile(){
+    const avatar = document.querySelector('.avatar_profile')
+    const logout = document.querySelector('.contanier_logout')
 
+    avatar.addEventListener('click',(event)=>{
+        
+      logout.classList.toggle("hidden")
+        
+    })
+}
+
+
+
+autentication()

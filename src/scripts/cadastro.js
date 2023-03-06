@@ -1,5 +1,11 @@
 import { registerRequest } from "./requests.js"
 
+function authentication(){
+    const token = localStorage.getItem('@petinfo:token')
+    if(token){
+    window.location.replace('./dashboard.html')
+    }
+}
 
 
 
@@ -53,3 +59,5 @@ function loginBack(){
 
 }
 loginBack()
+
+authentication()

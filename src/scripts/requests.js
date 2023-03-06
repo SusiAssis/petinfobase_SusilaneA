@@ -111,7 +111,7 @@ export async function creatPosts(postBody){
             return postJson
         }else{
             response.json().then((resp)=>{
-                alert(`${resp.message}`)
+                console.log(`${resp.message}`)
             })
         }
     })
