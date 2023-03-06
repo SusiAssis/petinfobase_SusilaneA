@@ -15,7 +15,7 @@ const token = localStorage.getItem('@petinfo:token')
     }
 }
 
-
+const green = '#22966D'
 
 
 async function renderDashboard(){
@@ -83,14 +83,14 @@ function handleNewPost(){
 
             newPost[name] = value
         })
-        console.log(newPost)
+       
         if(count!= 0){
             alert('Por favor preecha os campos necessários',)
         }else{
-            await creatPosts(newPost)
             modalControler.close()
-
             renderDashboard()
+            await creatPosts(newPost)
+            
 
         }
     })

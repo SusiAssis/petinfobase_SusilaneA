@@ -1,3 +1,5 @@
+import { toast } from "./render.js"
+
 const baseUrl = 'http://localhost:3333'
 const id = JSON.parse(localStorage.getItem('@petinfo:idPost'))
 const token = JSON.parse(localStorage.getItem('@petinfo:token'))
@@ -5,6 +7,9 @@ const requestHeaders = {
     'Content-type': 'application/json',
     Authorization: `Bearer ${token}`
 }
+
+const green = '#087F5B'
+const red = '#C96047'
 
 
 export async function loginRequest(loginBody){
@@ -48,7 +53,7 @@ export async function registerRequest(registerBody){
     })
     .then(response =>{
         if(response.ok){
-
+            toast('Sua conta foi criada com sucesso!',green)
             const responseJson = response.json().then(({id})=>{
 
                 localStorage.setItem('@petinfo:id', JSON.stringify(id))
@@ -169,7 +174,7 @@ export async function deletePost(postid){
     })
     .then(response =>{
         if(response.ok){
-            alert('Post deletada com sucesso')
+            toast('Post deletado com sucesso',green)
 
         return response.ok
         }else{

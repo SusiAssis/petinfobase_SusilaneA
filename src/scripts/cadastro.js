@@ -37,7 +37,7 @@ button.addEventListener('click', async(event)=>{
 
     setTimeout(()=>{
     window.location.replace('../../index.html')
-    },2000)
+    },3000)
 
     }
 

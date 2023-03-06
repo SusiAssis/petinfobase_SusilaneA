@@ -308,3 +308,21 @@ gap: 0.5em
     border:none;
     color: var(--gray400);
 }
+
+
+.toast__container{
+position: absolute;
+bottom: 2rem;
+right: 2rem;
+
+padding: 2rem;
+animation: toastIn 2s linear;
+
+z-index:0;
+border-radius: 4px;
+box-shadow: 2px 1px 1px 1px rgba(52, 58, 64,0.5);
+}
+.toast__container p{
+font-size: 1em;
+font-weight: 600;
+}
