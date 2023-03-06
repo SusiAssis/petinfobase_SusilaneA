@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/src/styles/globalStyles.css">
+    <link rel="stylesheet" href="/src/styles/dashboard.css">
+
+    <title>Petinfo | Dashboard</title>
+</head>
+<body>
+<dialog class="controler_modal">
+<div class="contanier_modal">
+    <button class="close_modal">Fechar</button>
+    <form>
+        <label>
+            titulo do lista_posts
+        </label>
+        <input type="text" name="titulo">
+    </form>
+</div>
+</dialog>
+    <nav>
+        <div class="contanier_logo">
+            
+            <h1>Petinfo</h1>
+            
+        <div class="contanier_perfil">
+            <button class="button_criar">Criar publicação</button>
+        </div>
+        </div>
+    </nav>
+
+    <div class="contanier_feed">
+        <div class="feed"><h2>Feed</h2></div>
+    </div>
+
+    <div class="contanier_posts">
+        <ul class="lista_posts">
+         
+          <li>
+
+            <div class="contanier_Perfil_Post">
+                <div class="header">
+                <img src="" alt="Foto de perfil">
+                <h3>Rafael Bertoldo</h3>
+                <p>Outubro de 2022</p>
+                </div>
+
+                <div>
+                    <button>Editar</button>
+                    <button>Excluir</button>
+                </div>
+            </div>
+
+            <div>
+                <h3>Outubro Rosa: Detalhes sobre a importância da prevenção do câncer de mama em cadelas e gatas</h3>
+                <p>Assim como em humanos, cadelas e gatas também podem desenvolver câncer de mama. Ainda hoje, para ambas as espécies, o câncer de mama tem maior...</p>
+                <a href="">Acessar publicação</a>
+            </div>
+
+          </li>
+
+        </ul>
+    </div>
+
+    <script type="module" src="../scripts/dashboard.js"></script>
+</body>
+</html>

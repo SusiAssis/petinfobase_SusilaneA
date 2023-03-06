@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/src/styles/globalStyles.css">
+    <link rel="stylesheet" href="/src/styles/cadastro.css">
+
+    <title>Petinfo | Cadastro</title>
+</head>
+<body>
+
+    <main>
+
+        <section class="section_cadastro">
+             
+            <div class="contanier_cadastro">
+            <h1>Cadastro</h1>
+            <button class="bnt_voltar">Voltar para o Login</button>
+            </div>
+
+
+            <div class="contanier_dados">
+            <label>Usuário
+                <input name="username" type="text" placeholder="Digite seu usuário aqui" class="cadastro_input">
+            </label>
+            
+            <label>Email
+                <input name="email" type="email" placeholder="Digite seu email aqui" class="cadastro_input">
+            </label>
+
+            <label>Link da foto do perfil
+                <input name="avatar" type="url" placeholder="Insira o link aqui" class="cadastro_input">
+            </label>
+
+            <label>Senha
+                <input name="password" type="password" placeholder="Digite sua senha aqui" class="cadastro_input">
+            </label>
+
+            <button class="bnt_cadastrar" type="submit">Cadastrar</button>
+            </div>
+
+            <button class="bnt_voltar">Voltar para o login</button>
+        
+    </section>
+
+    <section class="section_petinfo">
+        <h1>Petinfo</h1>
+        <h2>Ooooooba!</h2>
+        <p>Agora vamos poder contribuir para o bem estar do seu pet por meio do conhecimento</p>
+
+        <div class="contanier_fotosPets">
+            <img alt="fotos pets" src="/src/assets/img/cadastro/Rectangle 2.png">
+
+            <img class="pet3" src="/src/assets/img/cadastro/Rectangle 3.png">
+
+            <img class="pet4" src="/src/assets/img/cadastro/Rectangle 4.png">
+
+            <img class="pet5" src="/src/assets/img/cadastro/Rectangle 5.png">
+        </div>
+    </section>
+
+    </main>
+    <script type="module" src="/src/scripts/cadastro.js"></script>
+</body>
+</html>

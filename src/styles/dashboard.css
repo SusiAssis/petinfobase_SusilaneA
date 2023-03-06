@@ -1,0 +1,136 @@
+nav{
+    
+    width: 100vw;
+    display: flex;       
+}
+
+.contanier_logo{
+    margin: 0 auto;
+    padding:3em 0;
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contanier_logo h1{
+    font-size: 24px;
+}
+
+.contanier_perfil{
+    display: flex;
+    align-items: center;
+    gap: 0.8em;
+}
+
+.contanier_perfil button{
+    width: 152px;
+    height: 38px;
+    background-color: var(--brand100);
+    border: none;
+    border-radius:4px;
+    color: var(--gray900);
+    font-weight: 500;
+    font-size: 1em;
+}
+
+.contanier_perfil img{
+    width: 41px;
+    height: 41px;
+    border-radius: 100%;
+    border: 1px solid var(--brand100);
+}
+
+.contanier_feed{
+    margin: 0 auto;
+    width:100vw;
+    height: 64px;
+    background-color: #F8F9FA ;
+    display: flex;
+    align-items: center;
+}
+
+.feed{
+    margin: 0 auto;
+    width:70%;
+}
+.feed h2{
+    font-size:20px;
+}
+
+.contanier_posts{
+    width:100%;
+}
+.lista_posts{
+    list-style: none;
+    margin: 3em auto;
+    width:70%;
+}
+
+.lista_posts li{
+    width:100%;
+    height: auto;
+    margin-bottom: 4em;
+}
+
+.contanier_Perfil_Post{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1em;
+}
+
+.perfil{
+    display: flex;
+    gap: 1em;
+    align-items: center;
+}
+.perfil img{
+    width: 32px;
+    height: 32px;
+    border-radius: 100%;
+    border: 1px solid var(--brand100);
+}
+.perfil h3{
+font-size: 14px;
+
+}
+.perfil p{
+font-size: 14px;
+color: #868E96;
+}
+
+.contanier_buttons{
+    display: flex;
+    gap: 0.8em;
+}
+.contanier_buttons button{
+    width: 60px;
+    height: 32px;
+    background-color:#F1F3F5;
+    color: var(--gray400);
+    border: none;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 4px;
+}
+
+.contanier_conteudo{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.contanier_conteudo h3{
+    font-size: 24px;
+}
+
+.contanier_conteudo p{
+    font-size: 1em;
+    
+}
+
+.acessar_post{
+    color: var(--brand100);
+    font-weight: 600;
+}
